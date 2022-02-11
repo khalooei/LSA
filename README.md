@@ -1,5 +1,5 @@
 # Layers Sustainability Analysis framework (LSA)
-[[Presentation]](#)  [[Project]](https://github.com/khalooei/LSA) [[Paper]](https://arxiv.org/abs/2202.02626)
+[[Presentation]](#)  [[Project]](https://github.com/khalooei/LSA) [[Paper]](#)
 
 ![image info](./imgs/LSA.jpg)
 
