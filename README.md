@@ -5,13 +5,10 @@
 
 LSA stands for Layer Sustainability Analysis for the analysis of layer vulnerability in a given neural network. LSA can be a helpful toolkit to assess deep neural networks and to extend the adversarial training approaches towards improving the sustainability of model layers via layer monitoring and analysis. The LSA framework identifies a list of Most Vulnerable Layers (MVL list) of a given network. The relative error, as a comparison measure, is used to evaluate representation sustainability of each layer against adversarial attack inputs. 
 
-<p>
-  <a href="https://github.com/khalooei/LSA/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/khalooei/LSA?&color=brightgreen" /></a>
+[![License: MIT](https://img.shields.io/github/license/khalooei/LSA?&color=brightgreen)](https://github.com/khalooei/LSA/blob/master/LICENSE)
+[![PyPI - Python Version](https://img.shields.io/pypi/v/layer-sustainability-analysis.svg?&color=orange)](https://pypi.org/project/layer-sustainability-analysis/)
 [![Documentation Status](./imgs/bdg.svg)](#)
-[![PyPI](./imgs/badge.svg)](#)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI - Python Version](./imgs/lsa-toolbox.svg)](#)
+[![Release Status](https://img.shields.io/github/release/khalooei/LSA.svg?&color=blue)](https://github.com/khalooei/LSA/releases)
 
 ## Overview
 Sustainability and vulnerability in different domains have many definitions. In our case, the focus is on certain vulnerabilities that fool deep learning models in the feed-forward propagation approach. One main concentration is therefore on the analysis of forwarding vulnerability effects of deep neural networks in the adversarial domain. Analyzing the vulnerabilities of deep neural networks helps better understand different behaviors in dealing with input perturbations in order to attain more robust and sustainable models.
