@@ -1,5 +1,5 @@
 # Layers Sustainability Analysis framework (LSA)
-[[Presentation]](#)  [[Pytorch code]](https://github.com/khalooei/LSA) [[Paper]](https://arxiv.org/abs/2202.02626)
+[[Presentation]](./presentation-public.pdf)  [[Pytorch code]](https://github.com/khalooei/LSA) [[Paper]](https://arxiv.org/abs/2202.02626)
 
 ![image info](./imgs/LSA.jpg)
 
