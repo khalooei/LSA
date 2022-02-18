@@ -81,7 +81,7 @@ A new approach to perform an effective sensitivity analysis of different middle 
 The loss function of the network can be improved by including such regularization terms to reduce the vulnerability of middle layers.
 
 <center>
-<img src="https://latex.codecogs.com/svg.image?\hat{x}&space;=&space;\underset{Z&space;\in{B(x,\epsilon)}&space;}{arg&space;&space;\textbf{max}}&space;J(\theta,Z,y)\\\\min&space;\mathbb{E}_{(x,y)\sim\mathbb{D}}&space;{J(\theta,\hat{x},y)&plus;LR(\theta,x,\hat{x},y)}" title="\hat{x} = \underset{Z \in{B(x,\epsilon)} }{arg \textbf{max}} J(\theta,Z,y)\\\\min \mathbb{E}_{(x,y)\sim\mathbb{D}} {J(\theta,\hat{x},y)+LR(\theta,x,\hat{x},y)}" />
+<img src="https://latex.codecogs.com/svg.image?\hat{x}&space;=&space;\underset{Z&space;\in{B(x,\epsilon)}&space;}{\mathrm{arg\max}}&space;J(\theta,Z,y)\\\\min&space;\mathbb{E}_{(x,y)\sim\mathbb{D}}&space;{J(\theta,\hat{x},y)&plus;LR(\theta,x,\hat{x},y)}" title="\hat{x} = \underset{Z \in{B(x,\epsilon)} }{arg \textbf{max}} J(\theta,Z,y)\\\\min \mathbb{E}_{(x,y)\sim\mathbb{D}} {J(\theta,\hat{x},y)+LR(\theta,x,\hat{x},y)}" />
 </center>
 
 As observed in above equations, the proposed LR term is added in order to define an extension on base adversarial training through an inner maximization and outer minimization optimization problem. 
