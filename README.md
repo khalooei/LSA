@@ -12,26 +12,66 @@ LSA stands for Layer Sustainability Analysis for the analysis of layer vulnerabi
 
 ## Overview
 Sustainability and vulnerability in different domains have many definitions. In our case, the focus is on certain vulnerabilities that fool deep learning models in the feed-forward propagation approach. One main concentration is therefore on the analysis of forwarding vulnerability effects of deep neural networks in the adversarial domain. Analyzing the vulnerabilities of deep neural networks helps better understand different behaviors in dealing with input perturbations in order to attain more robust and sustainable models.
-The proposed approach for obtaining robust neural networks to fend off adversarial attacks is based on a layer-wise regularization (LR) over LSA proposal(s) for adversarial training (AT); i.e. the AT-LR procedure. AT-LR could be used with any benchmark adversarial attack to reduce the vulnerability of network layers and to improve conventional adversarial training approaches. The proposed idea performs well theoretically and experimentally for state-of-the-art multilayer perceptron and convolutional neural network architectures.
 
 ![image info](./imgs/LSA-proper-mini.gif)
+
+Analyzing the vulnerabilities of deep neural networks helps better understand different behaviors in dealing with input perturbations in order to attain more robust and sustainable models. One of the fundamental mathematical concepts that comes to mind in the sustainability analysis approach is Lipchitz continuity which grants deeper insight into the sustainability analysis of neural network models by approaching LR from the Lipschitz continuity perspective. 
+
+
+
+## Table of Contents
+1. [Requirements and Installation](#Requirements-and-Installation)
+2. [Getting Started](#Getting-Started)
+3. [Performance Comparison](#Performance-Comparison)
+4. [Citation](#Citation)
+5. [Contribution](#Contribution)
+
+
+## Requirements and Installation
+
+### :clipboard: Requirements
+
+- PyTorch version >=1.6.0
+- Python version >=3.6
+
+
+### :hammer: Installation
+
+```
+pip install layer-sustainability-analysis
+```
+
 
 
 ## Getting Started
 
-<details><summary>Easy installation</summary><p>
+###  :warning: Precautions
+* The LSA framework could be applied to any neural network architecture with no limitations.
+* * **`random_seed = 313` to get same training procedures. Some operations are non-deterministic with float tensors on GPU  [[discuss]](https://discuss.pytorch.org/t/inconsistent-gradient-values-for-the-same-input/26179).
+* Also, **`torch.backends.cudnn.deterministic = True` to get same adversarial examples with fixed random seed**. 
+* LSA uses a **hook** to represent each layer of the neural network. Thus, you can change its probs (checker positions). Activation functions such as *ReLU* and *ELU* are default probs.
 
-```python
- pip install layer-sustainability-analysis
-```
-</p></details>
 
+### :rocket: Demos
 
-<details><summary>Easy usage</summary><p>
+#### Given `selected_clean_sample`, `selected_pertubed_sample` and comparison `measure` are used in LSA:
 
 ```python
 from layer-sustainability-analysis import LayerSustainabilityAnalysis as LSA
 lsa = LSA(pretrained_model=model)
 lst_comparison_measures = LSA.representation_comparison(img_clean=selected_clean_sample, img_perturbed=selected_pertubed_sample, measure ='relative-error')
 ```
-</p></details>
+
+
+## Citation
+If you use this package, please cite the following BibTex ([SemanticScholar](https://www.semanticscholar.org/paper/Layer-wise-Regularized-Adversarial-Training-using-Khalooei-Homayounpour/d81464534f26bc5f9b5122e9fd1390bb1e07f575), [GoogleScholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=2HFVUn4AAAAJ&citation_for_view=2HFVUn4AAAAJ:Y0pCki6q_DkC)):
+
+```
+@article{Khalooei2022LayerwiseRA,
+  title={Layer-wise Regularized Adversarial Training using Layers Sustainability Analysis (LSA) framework},
+  author={Mohammad Khalooei and Mohammad Mehdi Homayounpour and Maryam Amirmazlaghani},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2202.02626}
+}
+```
