@@ -74,18 +74,23 @@ Each layer in below figure is related to any of learnable convolutional or fully
 
 [To be completed ...]
 
-###  :white_check_mark: Adversarial training using layer sustainability analysis
+
 One of the incentives of introducing regularization terms in the loss function of deep neural networks is to restrict certain effective parameters. 
 Researchers have attempted to discover effective parameters in several ways, but most approaches are not applicable to all networks. 
 A new approach to perform an effective sensitivity analysis of different middle layers of a neural network and administer the vulnerability in the loss function is obtained from the layer sustainability analysis framework. 
-The loss function of the network can be improved by including such regularization terms to reduce the vulnerability of middle layers. 
+The loss function of the network can be improved by including such regularization terms to reduce the vulnerability of middle layers.
+
 <center>
-<img src="https://latex.codecogs.com/svg.image?\hat{x}&space;=&space;\underset{Z&space;\in{B(x,\epsilon)}&space;}{arg&space;\textbf{max}}&space;J(\theta,Z,y)\\\\min&space;\mathbb{E}_{(x,y)\sim\mathbb{D}}&space;{J(\theta,\hat{x},y)&plus;LR(\theta,x,\hat{x},y)}" title="\hat{x} = \underset{Z \in{B(x,\epsilon)} }{arg \textbf{max}} J(\theta,Z,y)\\\\min \mathbb{E}_{(x,y)\sim\mathbb{D}} {J(\theta,\hat{x},y)+LR(\theta,x,\hat{x},y)}" />
+<img src="https://latex.codecogs.com/svg.image?\hat{x}&space;=&space;\underset{Z&space;\in{B(x,\epsilon)}&space;}{arg&space;&space;\textbf{max}}&space;J(\theta,Z,y)\\\\min&space;\mathbb{E}_{(x,y)\sim\mathbb{D}}&space;{J(\theta,\hat{x},y)&plus;LR(\theta,x,\hat{x},y)}" title="\hat{x} = \underset{Z \in{B(x,\epsilon)} }{arg \textbf{max}} J(\theta,Z,y)\\\\min \mathbb{E}_{(x,y)\sim\mathbb{D}} {J(\theta,\hat{x},y)+LR(\theta,x,\hat{x},y)}" />
 </center>
+
 As observed in above equations, the proposed LR term is added in order to define an extension on base adversarial training through an inner maximization and outer minimization optimization problem. 
+
 <center>
 <img src="https://latex.codecogs.com/svg.image?LR(\theta,x,\hat{x},y)&space;=&space;\sum_{l\in&space;\mathcal{M}}^{}&space;\gamma_{l}&space;CM_{LSA}(\phi_l(x),\phi_l(\hat{x}))" title="LR(\theta,x,\hat{x},y) = \sum_{l\in \mathcal{M}}^{} \gamma_{l} CM_{LSA}(\phi_l(x),\phi_l(\hat{x}))" />
 </center>
+
+
 
 [To be completed ...]
 
