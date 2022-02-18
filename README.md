@@ -47,7 +47,7 @@ pip install layer-sustainability-analysis
 
 ###  :warning: Precautions
 * The LSA framework could be applied to any neural network architecture with no limitations.
-* * **`random_seed = 313` to get same training procedures. Some operations are non-deterministic with float tensors on GPU  [[discuss]](https://discuss.pytorch.org/t/inconsistent-gradient-values-for-the-same-input/26179).
+* * **`random_seed = 313`** to get same training procedures. Some operations are non-deterministic with float tensors on GPU  [[discuss]](https://discuss.pytorch.org/t/inconsistent-gradient-values-for-the-same-input/26179).
 * Also, **`torch.backends.cudnn.deterministic = True` to get same adversarial examples with fixed random seed**. 
 * LSA uses a **hook** to represent each layer of the neural network. Thus, you can change its probs (checker positions). Activation functions such as *ReLU* and *ELU* are default probs.
 
