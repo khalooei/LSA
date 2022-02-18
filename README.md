@@ -81,7 +81,7 @@ If you use this package, please cite the following BibTex ([SemanticScholar](htt
 
 ## Contribution
 
-All kind of contributions are always welcome! :blush:
+All kind of contributions are always welcome! 
 
 Please let me know if you are interested in adding a new comparison measure and feature map visualization to this repository or if you would like to fix some issues.
 
