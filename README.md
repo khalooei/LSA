@@ -64,7 +64,7 @@ lst_comparison_measures = LSA.representation_comparison(img_clean=selected_clean
 
 
 ## Usage
-###  :white_check_mark: Neural network behavior analysis
+###  :white_check_mark: Neural network behavior analysis through feed-forward monitoring approach
 The figure illustrates comparison measure values for representation tensors of layers, during which a trained model is fed both clean and corresponding adversarially or statistically perturbed samples. Fluctuation patterns of comparison measure values for each layer in the model also demonstrate the difference in layer behaviors for clean and corresponding perturbed input. As can be seen in different model architectures, adversarial perturbations are more potent and have higher comparison measure values than statistical ones. In fact, as the literature shows that adversarial attacks are near the worst-case perturbations. However, the relative error of PGD-based adversarial attacks is much higher than that of FGSM adversarial attacks in all experiments. Salt and Gaussian statistical perturbation (noise) also have a much higher relative error value than the other statistical perturbations.  
 ![image info](./imgs/MNIST-LSA1.jpg)
 Note that some layers are more vulnerable than others.
