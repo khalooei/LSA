@@ -61,7 +61,7 @@ from LayerSustainabilityAnalysis import LayerSustainabilityAnalysis as LSA
 
 lsa = LSA(pretrained_model=model)
 
-lst_comparison_measures = lsa.representation_comparison(img_clean=selected_clean_sample, img_perturbed=selected_pertubed_sample, measure ='relative-error')
+lst_comparison_measures = lsa.representation_comparisons(img_clean=selected_clean_sample, img_perturbed=selected_pertubed_sample, measure ='relative-error')
 ```
 
 

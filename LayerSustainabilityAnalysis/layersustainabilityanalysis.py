@@ -29,7 +29,69 @@ class LayerSustainabilityAnalysis:
         img = img / np.max(img)
         return img
 
-    def representation_comparison(self,img_clean, img_perturbed, measure='MSE', verbose=True):
+    def representation_tensors(self,img_clean, img_perturbed, measure='MSE', verbose=True):
+        model = self.pretrained_model
+
+        # working with model variable
+        lst_tmp_representations = []
+        def hook_fn(m, i, o):
+            lst_tmp_representations.append(o)
+
+#     #   l = [module for module in model.modules() if not isinstance(module, nn.Sequential)]
+#     #   for layer in l[1:len(l)-2]:#model._modules.items():
+#     #        layer.register_forward_hook(hook_fn)
+
+        l = [module for module in model.modules() if not isinstance(module, nn.Sequential)]
+
+        # verbose
+        if verbose:
+            for layer in l[1:len(l)-2]:#model._modules.items():
+                print(layer.__str__())
+            print(l)
+
+        # prob layers
+        lst_blacklist = self.selected_probs
+        for item in model._modules:
+            try:
+                cnt = 0
+                for idx,(name, layer) in enumerate(enumerate(nn.ModuleList(list(model._modules[item])))):
+                    if verbose:
+                        print(idx,name)
+                    if layer.__str__().split('(')[0] in lst_blacklist:
+                        if verbose:
+                            print(cnt,'=>',layer.__str__())
+                        cnt = cnt + 1
+                        layer.register_forward_hook(hook_fn)
+                        if verbose:
+                            print('submit :)', layer.__str__())
+            except:
+                cnt = 0
+                l = [module for module in model.modules() if not isinstance(module, nn.Sequential)]
+                for layer in l[0:len(l) ]:  # model._modules.items():
+                    if layer.__str__().split('(')[0] in lst_blacklist:
+                        if verbose:
+                            print(cnt, '=>', layer.__str__())
+
+                        cnt = cnt +1
+                        layer.register_forward_hook(hook_fn)
+                        if verbose:
+                            print('submit :)', layer.__str__())
+                break
+        # ---------------------------------------------------------
+        #       for name,layer in model._modules.items():
+        #            layer.register_forward_hook(hook_fn)
+        #-----------------------------------------------------------
+
+        # check length of two identical representations
+        lst_tmp_representations=[]
+        _ = model(img_clean)
+        lst_representation_clean = lst_tmp_representations
+        if verbose:
+            print('visualization len is : {}'.format(len(lst_representation_clean)))
+
+        return lst_tmp_representations
+
+    def representation_comparisons(self,img_clean, img_perturbed, measure='MSE', verbose=True):
         model = self.pretrained_model
 
         # working with model variable
