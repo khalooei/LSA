@@ -1,1 +1,3 @@
-from layer_sustainability_analysis import *
+from .layersustainabilityanalysis import *
+
+__version__ = '1.0.1'

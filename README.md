@@ -38,7 +38,7 @@ Analyzing the vulnerabilities of deep neural networks helps better understand di
 ### :hammer: Installation
 
 ```
-pip install layer-sustainability-analysis
+pip install layersSustainabilityAnalysis
 ```
 
 
@@ -57,9 +57,11 @@ pip install layer-sustainability-analysis
 #### Given `selected_clean_sample`, `selected_pertubed_sample` and comparison `measure` are used in LSA:
 
 ```python
-from layer-sustainability-analysis import LayerSustainabilityAnalysis as LSA
+from LayerSustainabilityAnalysis import LayerSustainabilityAnalysis as LSA
+
 lsa = LSA(pretrained_model=model)
-lst_comparison_measures = LSA.representation_comparison(img_clean=selected_clean_sample, img_perturbed=selected_pertubed_sample, measure ='relative-error')
+
+lst_comparison_measures = lsa.representation_comparison(img_clean=selected_clean_sample, img_perturbed=selected_pertubed_sample, measure ='relative-error')
 ```
 
 

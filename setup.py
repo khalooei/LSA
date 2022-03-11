@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 
 setup(
-    name='layer-sustainability-analysis',
-    version='0.2',
+    name='LayersSustainabilityAnalysis',
+    version='1.0.1',
     url='https://github.com/khalooei/LSA',
     license='MIT',
     description='A Python library that analyzes the layer sustainability of neural networks',
