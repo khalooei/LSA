@@ -29,7 +29,7 @@ class LayerSustainabilityAnalysis:
         img = img / np.max(img)
         return img
 
-    def representation_tensors(self,img_clean, img_perturbed, measure='MSE', verbose=True):
+    def representation_tensors(self,img_clean, img_perturbed, verbose=True):
         model = self.pretrained_model
 
         # working with model variable
