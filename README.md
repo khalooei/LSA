@@ -6,7 +6,7 @@
 LSA stands for Layer Sustainability Analysis for the analysis of layer vulnerability in a given neural network. LSA can be a helpful toolkit to assess deep neural networks and to extend the adversarial training approaches towards improving the sustainability of model layers via layer monitoring and analysis. The LSA framework identifies a list of Most Vulnerable Layers (MVL list) of a given network. The relative error, as a comparison measure, is used to evaluate representation sustainability of each layer against adversarial attack inputs. 
 
 [![License: MIT](https://img.shields.io/github/license/khalooei/LSA?&color=brightgreen)](https://github.com/khalooei/LSA/blob/master/LICENSE)
-[![PyPI - Python Version](https://img.shields.io/pypi/v/layer-sustainability-analysis.svg?&color=orange)](https://pypi.org/project/layer-sustainability-analysis/)
+[![PyPI - Python Version](https://img.shields.io/pypi/v/LayersSustainabilityAnalysis.svg?&color=orange)](https://pypi.org/project/LayersSustainabilityAnalysis/)
 [![Documentation Status](./imgs/bdg.svg)](#)
 [![Release Status](https://img.shields.io/github/release/khalooei/LSA.svg?&color=blue)](https://github.com/khalooei/LSA/releases)
 
