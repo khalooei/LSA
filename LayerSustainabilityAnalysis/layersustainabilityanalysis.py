@@ -29,7 +29,7 @@ class LayerSustainabilityAnalysis:
         img = img / np.max(img)
         return img
 
-    def representation_tensors(self,img_clean, img_perturbed, verbose=True):
+    def representation_tensors(self,img, verbose=True):
         model = self.pretrained_model
 
         # working with model variable
@@ -84,10 +84,10 @@ class LayerSustainabilityAnalysis:
 
         # check length of two identical representations
         lst_tmp_representations=[]
-        _ = model(img_clean)
-        lst_representation_clean = lst_tmp_representations
+        _ = model(img)
+        lst_representation = lst_tmp_representations
         if verbose:
-            print('visualization len is : {}'.format(len(lst_representation_clean)))
+            print('visualization len is : {}'.format(len(lst_representation)))
 
         return lst_tmp_representations
 
